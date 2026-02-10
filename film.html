@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All-in-One Movie Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎬 Movie Hub</h1>
+    <input type="text" id="search" placeholder="Search movies..." />
+    <select id="genreFilter">
+      <option value="all">All Genres</option>
+      <option value="Action">Action</option>
+      <option value="Drama">Drama</option>
+      <option value="Comedy">Comedy</option>
+    </select>
+  </header>
+
+  <main id="movieList" class="grid"></main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+
+      <h3>Book Tickets</h3>
+      <form id="bookingForm">
+        <label>
+          Seats:
+          <input type="number" id="seats" min="1" max="10" required />
+        </label>
+        <button type="submit">Book</button>
+      </form>
+      <p id="totalPrice"></p>
+
+      <h3>Add Review</h3>
+      <input type="text" id="reviewText" placeholder="Write your review" />
+      <button id="addReview">Add Review</button>
+      <ul id="reviewList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
